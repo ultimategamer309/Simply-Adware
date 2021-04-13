@@ -1,1 +1,3 @@
-The linux batch file is really simple. It just runs the comand line ```apt-get install python3```
+# Linux Python Install Script
+- Installs latest version of python using ```apt-get```
+- ```Install.sh``` may require super user to work properly
