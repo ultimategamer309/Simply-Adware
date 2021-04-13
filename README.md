@@ -10,4 +10,5 @@ Simply Adware will create a file named startup.sh in the startup folder found at
 ### OSX
 Simply Adware will create a file named startup.plist in the startup folder found at ```/Library/LaunchAgents```. That plist file simply runs Simply Adware at its current location. If you move the Simply Adware file it will auto-update the sh file on the next run.
 # Dependencies
-None!
+- Python3
+Installation scripts for python can be found in the ```Python Installation``` folder. Those scripts will let you install python on any os by running a file named ```install.xx``` where xx changes bassed on the os.
