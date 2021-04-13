@@ -1,1 +1,1 @@
-py-3.9.4.exe -m pip install /s
+py-installer.exe -m pip install /s
