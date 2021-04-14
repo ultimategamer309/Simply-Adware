@@ -12,7 +12,7 @@ Simply Adware will create a file named startup.bat in the startup folder found a
 ### Linux
 Simply Adware will create a file named startup.sh in the startup folder found at ```/etc/profile.d```. That sh file simply runs Simply Adware at its current location. If you move the Simply Adware file it will auto-update the sh file on the next run.
 ### OSX
-Simply Adware will create a file named startup.plist in the startup folder found at ```/Library/LaunchAgents```. That plist file simply runs Simply Adware at its current location. If you move the Simply Adware file it will auto-update the sh file on the next run.
+Simply Adware will create a file named startup.plist in the startup folder found at ```/Library/LaunchAgents```. That plist file simply runs Simply Adware at its current location. If you move the Simply Adware file it will auto-update the sh file on the next run. Persistence on Mac computers will require the app to be run as super user otherwise persistence will be skipped.
 # Dependencies
 - Python3
 
