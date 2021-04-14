@@ -5,7 +5,7 @@ import time
 
 class adware:
     #changeable
-    links = ["https://acceptable.a-ads.com/1610167",
+    links = ["https://ad.a-ads.com/1612310",
              "https://caphaiks.com/4/4131263"]
     pyCall = "py"
     time = 2.5 * 60
